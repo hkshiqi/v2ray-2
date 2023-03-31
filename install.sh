@@ -151,8 +151,8 @@ v2ray_port_config() {
 		local random=$(shuf -i20001-65535 -n1)
 		while :; do
 			echo -e "请输入 "$yellow"V2Ray"$none" 端口 ["$magenta"1-65535"$none"]"
-			read -p "$(echo -e "(默认端口: ${cyan}${random}$none):")" v2ray_port
-			v2ray_port=$cyan$v2ray_port$none
+			#read -p "$(echo -e "(默认端口: ${cyan}${random}$none):")" v2ray_port
+			v2ray_port=$random
 			case $v2ray_port in
 			[1-9] | [1-9][0-9] | [1-9][0-9][0-9] | [1-9][0-9][0-9][0-9] | [1-5][0-9][0-9][0-9][0-9] | 6[0-4][0-9][0-9][0-9] | 65[0-4][0-9][0-9] | 655[0-3][0-5])
 				echo
